@@ -16,6 +16,6 @@ def lda(csv_file,colomn,n_of_topics,n_of_words):
     first_topic = LDA.components_[0]    
     top_topic_words = first_topic.argsort()[-10:]
     for i,topic in enumerate(LDA.components_):
-        print([count_vect.get_feature_names()[i] for i in topic.argsort()[-n_of_words:]])
+        return([count_vect.get_feature_names()[i] for i in topic.argsort()[-n_of_words:]])
 
 
